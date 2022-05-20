@@ -1,0 +1,205 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+@font-face {
+  font-family: 'Robotoregular';
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Robotobold';
+  src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FirsNeueregular';
+  src: url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+       url('../fonts/TTFirsNeue-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FirsNeuebold';
+  src: url('../fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+       url('../fonts/TTFirsNeue-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  @include fontRobotoBold;
+  line-height: 19px;
+  color: $textColor;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+.header__background {
+  background-color: $bgColor;
+}
+
+.container {
+  max-width: $containerMaxwidth;
+  margin: 0 auto;
+}
+
+.header__container {
+  display: flex;
+  padding: 24px 0 26px;
+  margin-bottom: 41px;
+}
+
+.header__logo {
+  width: 190px;
+  height: 30px;
+  margin-right: 139px;
+}
+
+.header__social-list {
+  display: flex;
+  height: 30px;
+  @include clearListStyles;
+
+  .header__social-item:not(:nth-child(3n)) {
+    margin-right: 20px;
+  }
+}
+
+.header__nav-link {
+  @include fontFirsRegular;
+  line-height: 21px;
+  color: $textColor;
+}
+
+.section-hero__container {
+  margin-bottom: 68px;
+}
+
+.section-hero__grid-item-background {
+  position: relative;
+  background-size: cover;
+  height: 630px;
+  background: url(../img/Fotoset.png) center center no-repeat transparent;
+}
+
+.section-hero__heshtag {
+  position: absolute;
+  left: auto;
+  right: 15px;
+  top: 15px;
+  padding: 7px 14px;
+  @include fontRobotoHesh;
+  color: $textColor;
+  background-color: $bgColor;
+}
+
+.section-hero__description {
+  padding-left: 59px;
+  padding-top: 400px;
+  @include fontRobotoReg;
+  line-height: 19px;
+  color: $textColor;
+}
+
+.section-hero__header {
+  padding-left: 59px;
+  padding-right: 145px;
+  padding-bottom: 19px;
+  @include fontFirsBold;
+  font-size: 36px;
+  line-height: 37px;
+  color: $textColor;
+}
+
+.section-hero__btn {
+  text-align: center;
+  margin-left: 59px;
+  padding: 15.5px 22px;
+  background-color: $btnColor;
+}
+
+.section-hero__header-work {
+  margin-top: -7px;
+  @include fontFirsBold;
+  font-size: 24px;
+  line-height: 25px;
+  color: $bgColor;
+}
+
+.section-about {
+  background-color: $bgColor;
+}
+
+.section-about__header {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  @include fontFirsBold;
+  font-size: 24px;
+  line-height: 31px;
+  color: $textColor;
+}
+
+.section-about__description {
+  @include fontRobotoReg;
+  line-height: 28px;
+  color: #CACACA;
+  padding-bottom: 70px;
+}
+
+.section-project__grid-item-background {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+}
+
+.section-project__grid-item-background1 {
+  background: url(../img/Rectangle21_4.png) center center no-repeat transparent;
+}
+
+.section-project__grid-item-background2 {
+  background: url(../img/Rectangle21.png) center center no-repeat transparent;
+}
+
+.footer__background {
+  background-color: $bgColor;
+}
+
+.footer__container {
+  padding: 24px 0 16px;
+}
