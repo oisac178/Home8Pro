@@ -10,6 +10,12 @@
   font-size: 16px;
 }
 
+@mixin fontFirsRegularBig {
+  font-family: 'FirsNeueregular', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
 @mixin fontRobotoHesh {
   font-family: 'Robotoregular', sans-serif;
   font-weight: 400;
@@ -22,6 +28,13 @@
   font-size: 16px;
 }
 
+@mixin fontRobotoDate {
+  font-family: 'Robotoregular', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+
 @mixin fontFirsBold {
   font-family: 'FirsNeuebold', sans-serif;
   font-weight: 700;
@@ -31,4 +44,31 @@
   font-family: 'Robotobold', sans-serif;
   font-weight: 700;
   font-size: 16px;
+}
+
+@mixin heshtagStyle {
+  position: absolute;
+  left: auto;
+  right: 15px;
+  top: 15px;
+}
+
+@mixin heshtagPrj {
+  position: absolute;
+  left: auto;
+  right: 7px;
+  top: 7px;
+}
+
+@mixin prjDescr {
+  position: relative;
+  background-size: cover;
+  height: 184px;
+  margin-bottom: 18px;
+}
+
+@mixin gridItemBground {
+  position: relative;
+  height: 300px;
+  background-size: cover;
 }

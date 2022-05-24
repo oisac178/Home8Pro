@@ -105,13 +105,13 @@
               институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</p>
           </div>
           <div class="section-about__grid-item">
-            <img src="img/photo.png" alt="photocamera">
-            <h3>Подписаться на рассылку</h3>
+            <img src="img/photo.png" alt="photocamera" class="section-about__picture">
+            <h3 class="section-about__send-text">Подписаться на рассылку</h3>
             <form action="https://jsonplaceholder.typicode.com/posts" method="POST" novalidate="novalidate" class="section-about__form form">
               <div class="section-about__block">
                 <label for="name" class="section-about__label">
                   <span class="visually-hidden">Введите email</span>
-                  <input class="section-about__input" type="email" name="email" placeholder="Email" data-validate-field="email" id="email">
+                  <input class="section-about__input" type="email" name="email" placeholder="E-mail" data-validate-field="email" id="email">
                 </label>
               </div>
               <a href="" aria-label="Кнопка отправить" class="btn section-about__btn">
@@ -130,90 +130,121 @@
         <div class="section-project__grid">
           <div class="section-project__grid-item section-project__grid-item1">
             <article class="card">
-              <img src="img/Rectangle12.png" class="card__image" alt="Нет фото">
-              <a href="#">#пейзаж</a>
-              <p>
+              <div class="section-project__background1">
+                <a href="#" class="section-project__heshtag">#пейзаж</a>
+              </div>
+              <p class="section-project__description">
                 Синтетически, смешаны с не уникальными данными до степени...
               </p>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>16 июня</time>
+              <div class="section-project__block">
+                <svg class="section-project__icon-date" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                </svg>
+                <time class="section-project__date">16 июня</time>
               </div>
             </article>
           </div>
           <div class="section-project__grid-item section-project__grid-item2">
             <article class="card">
-              <img src="img/Rectangle12_41.png" class="card__image" alt="Нет фото">
-              <a href="#">#портрет</a>
-              <p>
+              <div class="section-project__background2">
+                <a href="#" class="section-project__heshtag">#портрет</a>
+              </div>
+              <p class="section-project__description">
                 В своём стремлении улучшить опыт мы упускаем, что явные...
               </p>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>28 мая</time>
+              <div class="section-project__block">
+                <svg class="section-project__icon-date" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                </svg>
+                <time class="section-project__date">28 мая</time>
               </div>
             </article>
           </div>
           <div class="section-project__grid-item section-project__grid-item3">
             <article class="card">
-              <img src="img/Rectangle12_42.png" class="card__image" alt="Нет фото">
-              <a href="#">#предмет</a>
-              <p>
+              <div class="section-project__background3">
+                <a href="#" class="section-project__heshtag">#предмет</a>
+              </div>
+              <p class="section-project__description">
                 Равным образом, высокое качество позиционных...
               </p>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>14 мая</time>
+              <div class="section-project__block">
+                <svg class="section-project__icon-date" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                </svg>
+                <time class="section-project__date">14 мая</time>
               </div>
             </article>
           </div>
           <div class="section-project__grid-item section-project__grid-item4">
-            <div class="section-project__grid-item-background section-project__grid-item-background1">
-              <a href="#">#fuji</a>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>9 апреля</time>
+            <div class="section-project__grid-item-background1">
+              <a href="#" class="section-project__heshtag">#fuji</a>
+              <div class="section-project__pictures-block">
+                <div class="section-project__block">
+                  <svg class="section-project__icon-date2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                  </svg>
+                  <time class="section-project__date2">9 апреля</time>
+                </div>
+                <h3 class="section-project__pictures-header">Cемантический разбор</h3>
+                <p class="section-project__description2">
+                  В рамках спецификации современных стандартов, интерактивные прототипы
+                </p>
+                <div class="section-project__btn-block">
+                  <a href="#About" class="btn section-project__btn">О проекте</a>
+                </div>
               </div>
-              <h2>Cемантический разбор</h2>
-              <p>В рамках спецификации современных стандартов, интерактивные прототипы</p>
-              <a href="#About" class="btn section-project__btn">О проекте</a>
             </div>
           </div>
           <div class="section-project__grid-item section-project__grid-item5">
-            <div class="section-project__grid-item-background section-project__grid-item-background2">
-              <a href="#">#проектзабвение</a>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>30 марта</time>
+            <div class="section-project__grid-item-background2">
+              <a href="#" class="section-project__heshtag">#проектзабвение</a>
+              <div class="section-project__pictures-block">
+                <div class="section-project__block">
+                  <svg class="section-project__icon-date2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                  </svg>
+                  <time class="section-project__date2">30 марта</time>
+                </div>
+                <h3 class="section-project__pictures-header">Забвение</h3>
+                <p class="section-project__description2">
+                  Играет важную роль в формировании глубокомысленных рассуждений
+                </p>
+                <div class="section-project__btn-block">
+                  <a href="#About" class="btn section-project__btn">О проекте</a>
+                </div>
               </div>
-              <h2>Забвение</h2>
-              <p>Играет важную роль в формировании глубокомысленных рассуждений</p>
-              <a href="#About" class="btn section-project__btn">О проекте</a>
             </div>
           </div>
           <div class="section-project__grid-item section-project__grid-item6">
             <article class="card">
-              <img src="img/Rectangle12_43.png" class="card__image" alt="Нет фото">
-              <a href="#">#ретушь</a>
-              <p>
+              <div class="section-project__background4">
+                <a href="#" class="section-project__heshtag">#ретушь</a>
+              </div>
+              <p class="section-project__description">
                 Как принято считать, многие известные личности и по сей день остаются уделом либералов...
               </p>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>9 марта</time>
+              <div class="section-project__block">
+                <svg class="section-project__icon-date" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                </svg>
+                <time class="section-project__date">9 марта</time>
               </div>
             </article>
           </div>
           <div class="section-project__grid-item section-project__grid-item7">
             <article class="card">
-              <img src="img/Rectangle12_44.png" class="card__image" alt="Нет фото">
-              <a href="#">#портрет</a>
-              <p>
+              <div class="section-project__background5">
+                <a href="#" class="section-project__heshtag">#портрет</a>
+              </div>
+              <p class="section-project__description">
                 С учётом сложившейся международной обстановки, новая модель организационной...
               </p>
-              <div>
-                <img src="img/mdi_calendar.svg" alt="">
-                <time>1 марта</time>
+              <div class="section-project__block">
+                <svg class="section-project__icon-date" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 1.75004H11.0833V0.583374H9.91667V1.75004H4.08334V0.583374H2.91667V1.75004H2.33334C1.69167 1.75004 1.16667 2.27504 1.16667 2.91671V12.25C1.16667 12.8917 1.69167 13.4167 2.33334 13.4167H11.6667C12.3083 13.4167 12.8333 12.8917 12.8333 12.25V2.91671C12.8333 2.27504 12.3083 1.75004 11.6667 1.75004ZM11.6667 12.25H2.33334V4.66671H11.6667V12.25Z" />
+                </svg>
+                <time class="section-project__date">1 марта</time>
               </div>
             </article>
           </div>
@@ -241,38 +272,40 @@
               <p class="section-contact__home">
                 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
               </p>
-              <img src="img/mdi_call.svg" alt="">
-              <p>+7 (495) 42-423-532</p>
+              <div class="section-contact__phone">
+                <img src="img/mdi_call.svg" alt=""/>
+                <p class="section-contact__phone-text">+7 (495) 42-423-532</p>
+              </div>
             </div>
           </div>
           <div class="section-contact__grid-item section-contact__grid-item1" id="map"></div>
           <div class="section-contact__grid-item">
-            <h3>
+            <h3 class="section-contact__form-header">
               Оставить заявку
             </h3>
-            <p>
+            <p class="section-contact__form-description">
               Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
             </p>
-            <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form">
-              <div class="footer__block">
+            <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="section-contact__form form">
+              <div class="section-contact__block">
                 <label>
                   <span class="visually-hidden">Введите имя</span>
-                  <input required class="footer__block-input" type="text" name="fullname" value="Имя">
+                  <input class="section-contact__block-input section-contact__block-input1" type="text" name="fullname" value="Имя">
                 </label>
               </div>
-              <div class="footer__block">
+              <div class="section-contact__block">
                 <label>
                   <span class="visually-hidden">Введите E-mail</span>
-                  <input required class="footer__block-input" type="email" name="E-mail" value="E-mail*">
+                  <input class="section-contact__block-input section-contact__block-input1" type="email" name="E-mail" value="E-mail">
                 </label>
               </div>
-              <div class="footer__block footer__block2">
+              <div class="section-contact__block">
                 <label>
                   <span class="visually-hidden">Введите комментарий</span>
-                  <input class="footer__block-input" type="text" name="fullname" value="Комментарий">
+                  <input class="section-contact__block-input section-contact__block-input2" type="text" name="comment" value="Комментарий">
                 </label>
               </div>
-              <button type="submit" aria-label="Отправить" class="btn btn__submit">
+              <button type="submit" aria-label="Отправить" class="btn section-contact__btn-submit">
                 Отправить
               </button>
             </form>
