@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+@mixin fontFirsRegularLtl {
+  font-family: 'FirsNeueregular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 @mixin fontFirsRegular {
   font-family: 'FirsNeueregular', sans-serif;
   font-weight: 400;
