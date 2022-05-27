@@ -109,22 +109,19 @@ a {
   line-height: 21px;
   color: $textColor;
   transition: color .3s ease-in-out;
-}
-
-.header__nav-link:focus {
-  outline: none;
-  background-color: $focusColor;
-}
-
-.header__nav-link:hover {
-  color: $FF6E30;
-  transition: color .5s ease-in-out;
-}
-
-.header__nav-link:active {
-  color: $activeColor;
-  background-color: transparent;
-  transition: color .3s ease-in-out;
+  &:focus {
+    outline: none;
+    background-color: $focusColor;
+  }
+  &:hover {
+    color: $FF6E30;
+    transition: color .5s ease-in-out;
+  }
+  &:active {
+    color: $activeColor;
+    background-color: transparent;
+    transition: color .3s ease-in-out;
+  }
 }
 
 .section-hero__container {
@@ -170,21 +167,18 @@ a {
   padding: 15.5px 22px;
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
-}
-
-.section-hero__btn:focus {
-  outline: none;
-  border: 3px solid $CE4307;
-}
-
-.section-hero__btn:hover {
-  background-color: $focusColor;
-  transition: background-color .5s ease-in-out;
-}
-
-.section-hero__btn:active {
-  background-color: $CE4307;
-  transition: background-color .3s ease-in-out;
+  &:focus {
+    outline: none;
+    border: 3px solid $CE4307;
+  }
+  &:hover {
+    background-color: $focusColor;
+    transition: background-color .5s ease-in-out;
+  }
+  &:active {
+    background-color: $CE4307;
+    transition: background-color .3s ease-in-out;
+  }
 }
 
 .section-hero__header-work {
