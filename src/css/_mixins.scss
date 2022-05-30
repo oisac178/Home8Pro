@@ -78,3 +78,56 @@
   height: 300px;
   background-size: cover;
 }
+
+@mixin btnHover {
+  &:focus {
+    outline: 3px solid $activeColor;
+    outline-offset: -3px;
+  }
+  &:hover {
+    background-color: $focusColor;
+    transition: background-color .5s ease-in-out;
+  }
+  &:active {
+    background-color: $activeColor;
+    transition: background-color .3s ease-in-out;
+  }
+}
+
+@mixin btnPrjHover {
+  &:focus {
+    outline: 3px solid $btnColor;
+    background-color: $focusColor;
+    outline-offset: -3px;
+  }
+  &:hover {
+    background-color: $btnColor;
+    transition: background-color .5s ease-in-out;
+  }
+  &:active {
+    background-color: $activeColor;
+    outline: 3px solid $activeColor;
+    outline-offset: -3px;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@mixin socialHover {
+  &:hover {
+    fill: $btnColor;
+    transition: fill 0.3s ease-in-out;
+  }
+  &:active {
+    fill: $activeColor;
+    transition: fill 0.3s ease-in-out;
+  }
+}
+
+@mixin contactInput {
+  display: block;
+  width: 410px;
+  margin-bottom: 20px;
+  line-height: 19px;
+  border: none;
+  background-color: #E9E9E9;
+}

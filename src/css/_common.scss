@@ -76,6 +76,10 @@ a {
 .container {
   max-width: $containerMaxwidth;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+  max-width: 963px;
+  }
 }
 
 .header__container {
@@ -88,6 +92,12 @@ a {
   width: 190px;
   height: 30px;
   margin-right: 139px;
+
+  @media (max-width: 1024px) {
+    width: 166px;
+    height: 27px;
+    margin-right: 82px;
+  }
 }
 
 .header__social-list {
@@ -97,6 +107,21 @@ a {
 
   .header__social-item:not(:nth-child(3n)) {
     margin-right: 20px;
+  }
+
+  .header__social-icon {
+    fill: $grayColor;
+    transition: fill 0.3s ease-in-out;
+    @include socialHover;
+  }
+}
+
+.header__social-link {
+  &:focus {
+    outline: none;
+    .header__social-icon {
+      fill: $focusColor;
+    }
   }
 }
 
@@ -114,7 +139,7 @@ a {
     background-color: $focusColor;
   }
   &:hover {
-    color: $FF6E30;
+    color: $btnColor;
     transition: color .5s ease-in-out;
   }
   &:active {
@@ -167,18 +192,7 @@ a {
   padding: 15.5px 22px;
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
-  &:focus {
-    outline: none;
-    border: 3px solid $CE4307;
-  }
-  &:hover {
-    background-color: $focusColor;
-    transition: background-color .5s ease-in-out;
-  }
-  &:active {
-    background-color: $CE4307;
-    transition: background-color .3s ease-in-out;
-  }
+  @include btnHover;
 }
 
 .section-hero__header-work {
@@ -226,6 +240,10 @@ a {
   display: flex;
 }
 
+.section-about__label {
+  position: relative;
+}
+
 .section-about__input {
   display: block;
   padding: 16px 23px;
@@ -233,8 +251,46 @@ a {
   width: 474px;
   @include fontRobotoReg;
   border: none;
-  color: $grayColor;
+  caret-color: $textColor;
+  color: $textColor;
   background-color: #4A4A4A;
+
+  &::placeholder {
+    color: $grayColor;
+    transition: color .5s ease-in-out;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $btnColor;
+      transition: color .5s ease-in-out;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid $btnColor;
+    outline-offset: -1px;
+
+    &:invalid {
+      outline: none;
+    }
+  }
+
+  &:invalid {
+    outline: 1px solid #F06666;
+    outline-offset: -1px;
+  }
+}
+
+.section-about__error {
+  position: absolute;
+  left: 23px;
+  top: 3px;
+  font-family: 'Robotoregular', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #F06666;
 }
 
 .section-about__btn {
@@ -242,6 +298,8 @@ a {
   border: none;
   padding: 15.5px 22px;
   background-color: $btnColor;
+  transition: background-color .3s ease-in-out;
+  @include btnHover;
 }
 
 .section-project {
@@ -357,6 +415,9 @@ a {
   text-align: center;
   padding: 12.5px 19px;
   border: 3px solid $btnColor;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
+  @include btnPrjHover;
 }
 
 .section-project__grid-item-background1 {
@@ -443,25 +504,50 @@ a {
   display: flex;
 }
 
-.section-contact__block-input {
-  display: block;
-  width: 410px;
-  margin-bottom: 20px;
-  @include fontRobotoReg;
-  line-height: 19px;
-  border: none;
-  color: $formColor;
-  background-color: #E9E9E9;
+.section-contact__label {
+  position: relative;
 }
 
-.section-contact__block-input1 {
+.section-contact__block-input {
   padding: 16px 23px;
+  color: $bgColor;
+  @include contactInput;
+  @include fontRobotoReg;
+
+  &::placeholder {
+    color: $formColor;
+    transition: color .5s ease-in-out;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $btnColor;
+      transition: color .5s ease-in-out;
+    }
+  }
+
+  &:focus {
+    outline: 1px solid $btnColor;
+    outline-offset: -1px;
+
+    &:invalid {
+      outline: none;
+    }
+  }
+
+  &:invalid {
+    outline: 1px solid #F06666;
+    outline-offset: -1px;
+  }
 }
 
 .section-contact__comment-text {
+  @include contactInput;
+  @include fontRobotoReg;
   height: 150px;
   padding-left: 23px;
   padding-top: 16px;
+  color: $formColor;
 }
 
 .section-contact__btn-submit {
@@ -469,6 +555,8 @@ a {
   border: none;
   padding: 15.5px 22px;
   background-color: $btnColor;
+  transition: background-color .3s ease-in-out;
+  @include btnHover;
 }
 
 .footer__background {
@@ -526,5 +614,19 @@ a {
 
   .footer__social-item:not(:nth-child(3n)) {
     margin-right: 21px;
+  }
+  .footer__social-icon {
+    fill: $grayColor;
+    transition: fill 0.3s ease-in-out;
+    @include socialHover;
+  }
+}
+
+.footer__social-link {
+  &:focus {
+    outline: none;
+    .footer__social-icon {
+      fill: $focusColor;
+    }
   }
 }
