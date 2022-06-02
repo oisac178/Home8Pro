@@ -78,7 +78,7 @@ a {
   margin: 0 auto;
 
   @media (max-width: 1024px) {
-  max-width: 963px;
+  max-width: 962px;
   }
 }
 
@@ -86,6 +86,11 @@ a {
   display: flex;
   padding: 24px 0 26px;
   margin-bottom: 41px;
+
+  @media (max-width: 1024px) {
+    padding: 27px 0;
+    margin-bottom: 34px;
+  }
 }
 
 .header__logo {
@@ -114,6 +119,10 @@ a {
     transition: fill 0.3s ease-in-out;
     @include socialHover;
   }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .header__social-link {
@@ -125,8 +134,24 @@ a {
   }
 }
 
+.header__btn-find {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  height: 25px;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
 .header__menu {
   padding-top: 5px;
+
+  @media (max-width: 1024px) {
+    padding-top: 0;
+  }
 }
 
 .header__nav-link {
@@ -161,6 +186,14 @@ a {
   background-size: cover;
   height: 630px;
   background: url(../img/Fotoset.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    padding-top: 424px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    height: 623px;
+    background: url(../img/Fotoset1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-hero__heshtag {
@@ -176,6 +209,10 @@ a {
   @include fontRobotoReg;
   line-height: 19px;
   color: $textColor;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 9px;
+  }
 }
 
 .section-hero__header {
@@ -185,6 +222,13 @@ a {
   font-size: 36px;
   line-height: 37px;
   color: $textColor;
+
+  @media (max-width: 1024px) {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    font-size: 34px;
+    line-height: 34px;
+  }
 }
 
 .section-hero__btn {
@@ -201,6 +245,10 @@ a {
   font-size: 24px;
   line-height: 25px;
   color: $bgColor;
+
+  @media (max-width: 1024px) {
+    margin-top: 0;
+  }
 }
 
 .section-about {
@@ -222,11 +270,19 @@ a {
   line-height: 28px;
   color: $grayColor;
   padding-bottom: 70px;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 60px;
+  }
 }
 
 .section-about__picture {
   padding-top: 63px;
   padding-bottom: 23px;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 20px;
+  }
 }
 
 .section-about__send-text {
@@ -238,6 +294,10 @@ a {
 
 .section-about__form {
   display: flex;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .section-about__label {
@@ -280,6 +340,10 @@ a {
     outline: 1px solid #F06666;
     outline-offset: -1px;
   }
+
+  @media (max-width: 1024px) {
+    width: 342px;
+  }
 }
 
 .section-about__error {
@@ -296,14 +360,19 @@ a {
 .section-about__btn {
   text-align: center;
   border: none;
+  width: 126px;
   padding: 15.5px 22px;
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
   @include btnHover;
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
 }
 
 .section-project {
-  margin-bottom: 68px;
+  margin-bottom: 56px;
 }
 
 .section-project__header {
@@ -316,27 +385,47 @@ a {
 
 .section-project__background1 {
   @include prjDescr;
-  background: url(../img/Rectangle12.png) center center no-repeat transparent;
+  background: url(../img/Lake.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Lake1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background2 {
   @include prjDescr;
-  background: url(../img/Rectangle12_41.png) center center no-repeat transparent;
+  background: url(../img/Man.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Man1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background3 {
   @include prjDescr;
-  background: url(../img/Rectangle12_42.png) center center no-repeat transparent;
+  background: url(../img/Tea.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Tea1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background4 {
   @include prjDescr;
-  background: url(../img/Rectangle12_43.png) center center no-repeat transparent;
+  background: url(../img/Orange.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Orange1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background5 {
   @include prjDescr;
-  background: url(../img/Rectangle12_44.png) center center no-repeat transparent;
+  background: url(../img/Girl.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Girl1024.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__heshtag {
@@ -352,6 +441,21 @@ a {
   line-height: 22px;
   color: $bgColor;
   padding-bottom: 13px;
+
+  &-hidden2 {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    padding-bottom: 17px;
+    padding-right: 10px;
+    &-hidden {
+      display: none;
+    }
+    &-hidden2 {
+      display: inline-block;
+    }
+  }
 }
 
 .section-project__description2 {
@@ -396,6 +500,10 @@ a {
   flex-direction: column;
   height: 100%;
   padding: 22px 308px 30px 30px;
+
+  @media (max-width: 1024px) {
+    padding: 30px 268px 30px 30px;
+  }
 }
 
 .section-project__pictures-header {
@@ -422,12 +530,22 @@ a {
 
 .section-project__grid-item-background1 {
   @include gridItemBground;
-  background: url(../img/Rectangle21_4.png) center center no-repeat transparent;
+  background: url(../img/Eye.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Eye1024.png) center center no-repeat transparent;
+    height: 307px;
+  }
 }
 
 .section-project__grid-item-background2 {
   @include gridItemBground;
-  background: url(../img/Rectangle21.png) center center no-repeat transparent;
+  background: url(../img/Ice.png) center center no-repeat transparent;
+
+  @media (max-width: 1024px) {
+    background: url(../img/Ice1024.png) center center no-repeat transparent;
+    height: 307px;
+  }
 }
 
 .section-contact {
@@ -448,6 +566,10 @@ a {
   flex-direction: column;
   order: 1;
   background-color: rgba(32, 32, 32, 0.85);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .section-contact__btn-x {
@@ -569,6 +691,11 @@ a {
 
 .footer__logo {
   margin-top: 3px;
+
+  @media (max-width: 1024px) {
+    width: 166px;
+    height: 27px;
+  }
 }
 
 .footer__tm {

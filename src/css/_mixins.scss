@@ -130,4 +130,8 @@
   line-height: 19px;
   border: none;
   background-color: #E9E9E9;
+
+  @media (max-width: 1024px) {
+    width: 342px;
+  }
 }
