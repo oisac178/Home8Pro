@@ -1,12 +1,13 @@
 const { src, dest, series, watch } = require('gulp')
 const concat = require('gulp-concat')
-const gulp = require('gulp');
 const htmlMin = require('gulp-htmlmin')
 const autoprefixes = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const svgSprite = require('gulp-svg-sprite')
 const image = require('gulp-image')
-const sass = require('gulp-sass')(require('sass'))
+const sass = require('sass');
+const gulpSass = require('gulp-sass');
+const mainSass = gulpSass(sass);
 const del = require('del')
 const browserSync = require('browser-sync').create()
 
@@ -14,14 +15,9 @@ const clean = () => {
   return del(['dist'])
 }
 
-function buildStyles() {
-  return gulp.src('src/css/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('src/css'))
-}
-
 const styles = () => {
-  return src('src/css/**/*.css')
+  return src('src/css/**/*.scss')
+      .pipe(mainSass())
       .pipe(concat('main.css'))
       .pipe(autoprefixes({
         cascade: false
@@ -29,7 +25,7 @@ const styles = () => {
       .pipe(cleanCSS({
         level: 2
     }))
-      .pipe(dest('dist'))
+      .pipe(dest('src/css'))
       .pipe(browserSync.stream())
 }
 
@@ -78,10 +74,7 @@ watch('src/**/*.html', htmlMinify)
 watch('src/css/**/*.css', styles)
 watch('src/img/svg/**/*.svg', svgSprites)
 
-exports.buildStyles = buildStyles
-exports.watch = function () {
-  gulp.watch('src/css/**/*.scss', ['sass'])
-}
+
 exports.styles = styles
 exports.htmlMinify = htmlMinify
-exports.default = series(clean, buildStyles, htmlMinify, styles, images, svgSprites, watchFiles)
+exports.default = series(clean, htmlMinify, styles, images, svgSprites, watchFiles)
