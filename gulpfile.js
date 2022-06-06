@@ -25,7 +25,7 @@ const styles = () => {
       .pipe(cleanCSS({
         level: 2
     }))
-      .pipe(dest('src/css'))
+      .pipe(dest('dist/css'))
       .pipe(browserSync.stream())
 }
 
