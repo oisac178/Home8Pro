@@ -184,15 +184,16 @@ a {
   padding-left: 59px;
   padding-bottom: 60px;
   background-size: cover;
+  width: 630px;
   height: 630px;
-  background: url(../img/Fotoset.png) center center no-repeat transparent;
+  background: url(../images/Fotoset.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
     padding-top: 424px;
     padding-left: 30px;
     padding-bottom: 30px;
     height: 623px;
-    background: url(../img/Fotoset1024.png) center center no-repeat transparent;
+    background: url(../images/Fotoset1024.png) center center no-repeat transparent;
   }
 }
 
@@ -385,46 +386,46 @@ a {
 
 .section-project__background1 {
   @include prjDescr;
-  background: url(../img/Lake.png) center center no-repeat transparent;
+  background: url(../images/Lake.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Lake1024.png) center center no-repeat transparent;
+    background: url(../images/Lake1024.png) center center no-repeat transparent;
   }
 }
 
 .section-project__background2 {
   @include prjDescr;
-  background: url(../img/Man.png) center center no-repeat transparent;
+  background: url(../images/Man.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Man1024.png) center center no-repeat transparent;
+    background: url(../images/Man1024.png) center center no-repeat transparent;
   }
 }
 
 .section-project__background3 {
   @include prjDescr;
-  background: url(../img/Tea.png) center center no-repeat transparent;
+  background: url(../images/Tea.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Tea1024.png) center center no-repeat transparent;
+    background: url(../images/Tea1024.png) center center no-repeat transparent;
   }
 }
 
 .section-project__background4 {
   @include prjDescr;
-  background: url(../img/Orange.png) center center no-repeat transparent;
+  background: url(../images/Orange.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Orange1024.png) center center no-repeat transparent;
+    background: url(../images/Orange1024.png) center center no-repeat transparent;
   }
 }
 
 .section-project__background5 {
   @include prjDescr;
-  background: url(../img/Girl.png) center center no-repeat transparent;
+  background: url(../images/Girl.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Girl1024.png) center center no-repeat transparent;
+    background: url(../images/Girl1024.png) center center no-repeat transparent;
   }
 }
 
@@ -530,20 +531,20 @@ a {
 
 .section-project__grid-item-background1 {
   @include gridItemBground;
-  background: url(../img/Eye.png) center center no-repeat transparent;
+  background: url(../images/Eye.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Eye1024.png) center center no-repeat transparent;
+    background: url(../images/Eye1024.png) center center no-repeat transparent;
     height: 307px;
   }
 }
 
 .section-project__grid-item-background2 {
   @include gridItemBground;
-  background: url(../img/Ice.png) center center no-repeat transparent;
+  background: url(../images/Ice.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../img/Ice1024.png) center center no-repeat transparent;
+    background: url(../images/Ice1024.png) center center no-repeat transparent;
     height: 307px;
   }
 }
