@@ -5,9 +5,12 @@ const autoprefixes = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const svgSprite = require('gulp-svg-sprite')
 const image = require('gulp-image')
+const babel = require('gulp-babel')
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
 const mainSass = gulpSass(sass);
+const uglify = require('gulp-uglify-es').default
+const notify = require('gulp-notify')
 const del = require('del')
 const browserSync = require('browser-sync').create()
 
@@ -50,6 +53,21 @@ const svgSprites = () => {
       .pipe(dest('dist/images'))
 }
 
+const scripts = () => {
+  return src([
+      'src/js/**/*.js'
+  ])
+  .pipe(babel({
+      presets: ['@babel/env']
+  }))
+  .pipe(concat('app.js'))
+  .pipe(uglify({
+      toplevel: true
+  }).on('error', notify.onError()))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream())
+}
+
 const watchFiles = () => {
   browserSync.init({
       server: {
@@ -73,8 +91,10 @@ const images = () => {
 watch('src/**/*.html', htmlMinify)
 watch('src/css/**/*.css', styles)
 watch('src/img/svg/**/*.svg', svgSprites)
+watch('src/js/**/*.js', scripts)
 
 
 exports.styles = styles
+exports.scripts = scripts
 exports.htmlMinify = htmlMinify
-exports.default = series(clean, htmlMinify, styles, images, svgSprites, watchFiles)
+exports.default = series(clean, htmlMinify, scripts, styles, images, svgSprites, watchFiles)

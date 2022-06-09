@@ -13,9 +13,17 @@ ymaps.ready(init);
 
       var myPlacemark = new ymaps.Placemark([55.76677091515023,37.63878531749671], {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/group68.svg',
+        iconImageHref: 'images/group68.svg',
         iconImageSize: [15, 15],
         iconImageOffset: [-3, -42]
       });
       myMap.geoObjects.add(myPlacemark);
     }
+    ymaps.domEvent.manager
+    .add(myPlacemark, 'click', function (event) {
+      const path = event.currentTarget.dataset.path
+      document.querySelectorAll('.section-contact__grid-hidden').forEach(function(mapContent) {
+        mapContent.classList.remove('section-contact__active')
+      })
+      document.querySelector(`[data-target="${path}"]`).classList.add('section-contact__active')
+    });

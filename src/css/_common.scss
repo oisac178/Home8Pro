@@ -561,7 +561,7 @@ a {
   padding-bottom: 22px;
 }
 
-.section-contact__grid-hidden {
+.section-contact__active {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -631,9 +631,21 @@ a {
   position: relative;
 }
 
+.section-contact__error {
+  position: absolute;
+  left: 23px;
+  top: 3px;
+  font-family: 'Robotoregular', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #F06666;
+}
+
 .section-contact__block-input {
   padding: 16px 23px;
   color: $bgColor;
+  outline: none;
   @include contactInput;
   @include fontRobotoReg;
 
