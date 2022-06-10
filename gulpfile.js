@@ -13,10 +13,16 @@ const uglify = require('gulp-uglify-es').default
 const notify = require('gulp-notify')
 const del = require('del')
 const browserSync = require('browser-sync').create()
+var font = require('gulp')
 
 const clean = () => {
   return del(['dist'])
 }
+
+font.task('fonts', function() {
+  font.src('src/fonts/*{woff,woff2}')
+      .pipe(dest('dist/fonts'))
+});
 
 const styles = () => {
   return src('src/css/**/*.scss')

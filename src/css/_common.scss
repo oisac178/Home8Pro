@@ -561,6 +561,10 @@ a {
   padding-bottom: 22px;
 }
 
+.section-contact__grid-hidden {
+  display: none;
+}
+
 .section-contact__active {
   position: absolute;
   display: flex;
@@ -668,11 +672,6 @@ a {
     &:invalid {
       outline: none;
     }
-  }
-
-  &:invalid {
-    outline: 1px solid #F06666;
-    outline-offset: -1px;
   }
 }
 
