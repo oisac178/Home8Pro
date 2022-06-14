@@ -20,9 +20,9 @@ const clean = () => {
 }
 
 font.task('fonts', function() {
-  font.src('src/fonts/*{woff,woff2}')
+  return src('src/fonts/*{woff,woff2}')
       .pipe(dest('dist/fonts'))
-});
+})
 
 const styles = () => {
   return src('src/css/**/*.scss')

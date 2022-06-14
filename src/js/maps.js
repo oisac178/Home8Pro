@@ -19,11 +19,3 @@ ymaps.ready(init);
       });
       myMap.geoObjects.add(myPlacemark);
     }
-    ymaps.domEvent.manager
-    .add(myPlacemark, 'click', function (event) {
-      const path = event.currentTarget.dataset.path
-      document.querySelectorAll('.section-contact__grid-hidden').forEach(function(mapContent) {
-        mapContent.classList.remove('section-contact__active')
-      })
-      document.querySelector(`[data-target="${path}"]`).classList.add('section-contact__active')
-    });
