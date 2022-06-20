@@ -13,16 +13,15 @@ const uglify = require('gulp-uglify-es').default
 const notify = require('gulp-notify')
 const del = require('del')
 const browserSync = require('browser-sync').create()
-var font = require('gulp')
 
 const clean = () => {
   return del(['dist'])
 }
 
-font.task('fonts', function() {
+const font = () => {
   return src('src/fonts/*{woff,woff2}')
       .pipe(dest('dist/fonts'))
-})
+}
 
 const styles = () => {
   return src('src/css/**/*.scss')
@@ -95,12 +94,12 @@ const images = () => {
 
 
 watch('src/**/*.html', htmlMinify)
-watch('src/css/**/*.css', styles)
+watch('src/css/**/*.scss', styles)
 watch('src/img/svg/**/*.svg', svgSprites)
 watch('src/js/**/*.js', scripts)
 
-
+exports.font = font
 exports.styles = styles
 exports.scripts = scripts
 exports.htmlMinify = htmlMinify
-exports.default = series(clean, htmlMinify, scripts, styles, images, svgSprites, watchFiles)
+exports.default = series(clean, font, htmlMinify, scripts, styles, images, svgSprites, watchFiles)
