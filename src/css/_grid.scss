@@ -7,11 +7,13 @@
   grid-template-columns: repeat(5, auto);
   grid-template-rows: repeat(1, auto);
   gap: 79px;
-  margin-right: 87px;
+
+  @media (max-width: 1366px) {
+    gap: 50px;
+  }
 
   @media (max-width: 1024px) {
     gap: 33px;
-    margin-right: 131px;
   }
 
   @media (max-width: 768px) {
@@ -25,9 +27,18 @@
   grid-template-rows: 10px auto auto;
   gap: 30px;
 
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(auto-fill, minmax(218px, 1fr));
     grid-template-rows: 52px 332px auto;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+    grid-template-rows: 35px 228px auto;
   }
 }
 
@@ -47,6 +58,10 @@
   @media (max-width: 1024px) {
     margin-top: -8px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: -2px;
+  }
 }
 
 .section-hero__grid-item4 {
@@ -55,6 +70,10 @@
   @media (max-width: 1024px) {
     margin-top: -8px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: -2px;
+  }
 }
 
 .section-hero__grid-item5 {
@@ -62,6 +81,10 @@
 
   @media (max-width: 1024px) {
     margin-top: -8px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: -2px;
   }
 }
 
@@ -78,9 +101,18 @@
   grid-template-rows: repeat(2, 300px);
   gap: 30px;
 
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(12, minmax(75px, 1fr));
+    grid-gap: 15px;
+  }
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(8, minmax(94px, 1fr));
     grid-template-rows: 285px 307px 307px;
+  }
+
+  @media (max-width: 975px) {
+    grid-template-columns: repeat(8, minmax(80px, 1fr));
   }
 }
 
@@ -146,8 +178,16 @@
   grid-template-rows: repeat(1, 460px);
   grid-gap: 30px;
 
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(3, minmax(330px, 1fr));
+  }
+
   @media (max-width: 1024px) {
     grid-template-columns: repeat(8, minmax(94px, 1fr));
+  }
+
+  @media (max-width: 975px) {
+    grid-template-columns: repeat(8, minmax(60px, 1fr));
   }
 
   &-hidden {
@@ -187,7 +227,15 @@
   grid-template-rows: repeat(1, auto);
   grid-gap: 30px;
 
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(3, minmax(330px, 1fr));
+  }
+
   @media (max-width: 1024px) {
     grid-template-columns: 342px 370px auto;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: auto 370px auto;
   }
 }
