@@ -1,6 +1,7 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 @import '_map.scss';
+@import '_burger.scss';
 
 @font-face {
   font-family: 'Robotoregular';
@@ -86,7 +87,7 @@ a {
   }
 
   @media (max-width: 768px) {
-    max-width: 714px;
+    max-width: 100%;
   }
 }
 
@@ -103,6 +104,11 @@ a {
   @media (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 36px;
+    padding: 0;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 30px;
   }
 }
 
@@ -122,6 +128,19 @@ a {
 
   @media (max-width: 975px) {
     margin-right: 30px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 27px;
+    margin-bottom: 3px;
+    margin-left: 27px;
+  }
+
+  @media (max-width: 320px) {
+    width: 112px;
+    height: 18px;
+    margin-left: 21px;
+    margin-top: 26px;
   }
 }
 
@@ -173,6 +192,20 @@ a {
     display: inline-block;
     margin-top: -28px;
     margin-bottom: 25px;
+    margin-right: 27px;
+  }
+
+  @media (max-width: 320px) {
+    margin-top: -35px;
+    margin-bottom: 25px;
+    margin-right: 21px;
+  }
+}
+
+.header__icon-find {            ///
+  @media (max-width: 320px) {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -186,8 +219,28 @@ a {
   @media (max-width: 768px) {
     order: 2;
     display: block;
+    padding: 12px 27px;
     background-color: #4A4A4A;
   }
+
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.is-active + .header__nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 541px;
+    padding-top: 70px;
+    padding-left: 33px;
+    background-color: $bgColor;
+    transition: all 0.5s ease;
+    z-index: 10;
 }
 
 .header__nav-link {
@@ -212,6 +265,11 @@ a {
 
 .section-hero__container {
   margin-bottom: 62px;
+  @include containerPadd;
+
+  @media (max-width: 320px) {
+    margin-bottom: 44px;
+  }
 }
 
 .section-hero__grid-item-background {
@@ -234,6 +292,12 @@ a {
     padding-top: 223px;
     background-size: contain;
   }
+
+  @media (max-width: 320px) {
+    padding-top: 234px;
+    padding-bottom: 10px;
+    background: url(../images/Fotoset320.png) no-repeat transparent;
+  }
 }
 
 .section-hero__heshtag {
@@ -242,6 +306,11 @@ a {
   @include fontRobotoHesh;
   color: $textColor;
   background-color: $bgColor;
+
+  @media (max-width: 320px) {
+   padding: 4px 7px;
+   font-size: 12px;
+  }
 }
 
 .section-hero__description {
@@ -257,6 +326,11 @@ a {
   @media (max-width: 768px) {
     padding-bottom: 14px;
   }
+
+  @media (max-width: 320px) {
+    @include fontRobotoHesh;
+    padding-bottom: 8px;
+   }
 }
 
 .section-hero__header {
@@ -279,6 +353,13 @@ a {
     padding-right: 73px;
     padding-bottom: 23px;
   }
+
+  @media (max-width: 320px) {
+    line-height: 26px;
+    font-size: 24px;
+    padding-bottom: 14px;
+    padding-right: 79px;
+  }
 }
 
 .section-hero__btn {
@@ -287,6 +368,12 @@ a {
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
   @include btnHover;
+
+  @media (max-width: 320px) {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .section-hero__header-work {
@@ -304,11 +391,25 @@ a {
     font-size: 22px;
     line-height: 23px;
   }
+
+  @media (max-width: 320px) {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 19px;
+  }
 }
 
 .section-about {
   background-color: $bgColor;
   margin-bottom: 68px;
+
+  @media (max-width: 320px) {
+    margin-bottom: 50px;
+  }
+}
+
+.section-about__container {
+  @include containerPadd;
 }
 
 .section-about__header {
@@ -318,6 +419,11 @@ a {
   font-size: 24px;
   line-height: 31px;
   color: $textColor;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 
 .section-about__description {
@@ -331,7 +437,13 @@ a {
   }
 
   @media (max-width: 768px) {
-    padding-bottom: 40px;
+    padding-bottom: 62px;
+  }
+
+  @media (max-width: 320px) {
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 
@@ -342,6 +454,11 @@ a {
   @media (max-width: 1024px) {
     padding-bottom: 20px;
   }
+
+  @media (max-width: 320px) {
+    padding-top: 5px;
+    padding-bottom: 22px;
+  }
 }
 
 .section-about__send-text {
@@ -349,6 +466,10 @@ a {
   line-height: 22px;
   color: $textColor;
   padding-bottom: 14px;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+  }
 }
 
 .section-about__form {
@@ -403,6 +524,12 @@ a {
   @media (max-width: 1366px) {
     width: 342px;
   }
+
+  @media (max-width: 320px) {
+    width: 100%;
+    padding: 12px 23px;
+    font-size: 14px;
+  }
 }
 
 .section-about__error {
@@ -428,6 +555,14 @@ a {
   @media (max-width: 1024px) {
     margin-top: 20px;
   }
+
+  @media (max-width: 320px) {
+    padding: 12px 22px;
+    margin-bottom: 60px;
+    width: 115px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .section-project {
@@ -436,6 +571,18 @@ a {
   @media (max-width: 1024px) {
     margin-bottom: 56px;
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 50px;
+  }
+}
+
+.section-project__container {
+  @include containerPadd;
 }
 
 .section-project__header {
@@ -444,6 +591,12 @@ a {
   line-height: 31px;
   color: $bgColor;
   padding-bottom: 12px;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    line-height: 23px;
+    padding-bottom: 15px;
+  }
 }
 
 .section-project__background1 {
@@ -452,6 +605,14 @@ a {
 
   @media (max-width: 1024px) {
     background: url(../images/Lake1024.png) center center no-repeat transparent;
+  }
+
+  @media (max-width: 768px) {
+    background-position: left;
+  }
+
+  @media (max-width: 320px) {
+    background: url(../images/Lake320.png) center center no-repeat transparent;
   }
 }
 
@@ -462,6 +623,10 @@ a {
   @media (max-width: 1024px) {
     background: url(../images/Man1024.png) center center no-repeat transparent;
   }
+
+  @media (max-width: 320px) {
+    background: url(../images/Man320.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background3 {
@@ -470,6 +635,14 @@ a {
 
   @media (max-width: 1024px) {
     background: url(../images/Tea1024.png) center center no-repeat transparent;
+  }
+
+  @media (max-width: 768px) {
+    background: url(../images/Tea768.png) right center no-repeat transparent;
+  }
+
+  @media (max-width: 320px) {
+    background: url(../images/Tea320.png) right center no-repeat transparent;
   }
 }
 
@@ -480,6 +653,10 @@ a {
   @media (max-width: 1024px) {
     background: url(../images/Orange1024.png) center center no-repeat transparent;
   }
+
+  @media (max-width: 320px) {
+    background: url(../images/Orange320.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__background5 {
@@ -489,6 +666,14 @@ a {
   @media (max-width: 1024px) {
     background: url(../images/Girl1024.png) center center no-repeat transparent;
   }
+
+  @media (max-width: 768px) {
+    background: url(../images/Girl768.png) center center no-repeat transparent;
+  }
+
+  @media (max-width: 320px) {
+    background: url(../images/Girl320.png) center center no-repeat transparent;
+  }
 }
 
 .section-project__heshtag {
@@ -497,20 +682,28 @@ a {
   @include fontRobotoHesh;
   color: $textColor;
   background-color: $bgColor;
+
+  @media (max-width: 320px) {
+    padding: 4px 14px;
+    font-size: 12px;
+  }
+}
+
+.section-project__grid-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .section-project__description {
   @include fontRobotoReg;
   line-height: 22px;
   color: $bgColor;
-  padding-bottom: 13px;
 
   &-hidden2 {
     display: none;
   }
 
   @media (max-width: 1024px) {
-    padding-bottom: 17px;
     padding-right: 10px;
     &-hidden {
       display: none;
@@ -519,6 +712,22 @@ a {
       display: inline-block;
     }
   }
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    margin-bottom: auto;
+
+    &-hidden {
+      display: inline-block;
+    }
+    &-hidden2 {
+      display: none;
+    }
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 10px;
+  }
 }
 
 .section-project__description2 {
@@ -526,10 +735,35 @@ a {
   line-height: 22px;
   color: $textColor;
   margin-bottom: auto;
+
+  @media (max-width: 768px) {
+    width: 292px;
+  }
+
+  @media (max-width: 320px) {
+    width: 218px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+.section-project__description3 {
+  @media (max-width: 320px) {
+    margin-bottom: 21px;
+  }
 }
 
 .section-project__block {
   display: flex;
+  margin-bottom: 0;
+  width: 100px;
+}
+
+.section-project__block2 {
+  @media (max-width: 320px) {
+    margin-bottom: 6px;
+  }
 }
 
 .section-project__icon-date {
@@ -567,6 +801,10 @@ a {
   @media (max-width: 1024px) {
     padding: 30px 268px 30px 30px;
   }
+
+  @media (max-width: 320px) {
+    padding: 196px 30px 30px 30px;
+  }
 }
 
 .section-project__pictures-header {
@@ -576,6 +814,14 @@ a {
   font-size: 24px;
   line-height: 24px;
   color: $textColor;
+
+  @media (max-width: 768px) {
+    width: 290px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 8px;
+  }
 }
 
 .section-project__btn-block {
@@ -589,6 +835,11 @@ a {
   background-color: transparent;
   transition: background-color .3s ease-in-out;
   @include btnPrjHover;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
 }
 
 .section-project__grid-item-background1 {
@@ -598,6 +849,16 @@ a {
   @media (max-width: 1024px) {
     background: url(../images/Eye1024.png) center center no-repeat transparent;
     height: 307px;
+  }
+
+  @media (max-width: 768px) {
+    background: url(../images/Eye768.png) center center no-repeat transparent;
+    height: 300px;
+  }
+
+  @media (max-width: 320px) {
+    background: url(../images/Eye320.png) center center no-repeat transparent;
+    height: 422px;
   }
 }
 
@@ -609,10 +870,36 @@ a {
     background: url(../images/Ice1024.png) center center no-repeat transparent;
     height: 307px;
   }
+
+  @media (max-width: 768px) {
+    background: url(../images/Ice768.png) center center no-repeat transparent;
+    height: 300px;
+  }
+
+  @media (max-width: 320px) {
+    background: url(../images/Ice320.png) center center no-repeat transparent;
+    height: 422px;
+  }
 }
 
 .section-contact {
   margin-bottom: 68px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 43px;
+  }
+}
+
+.section-contact__container {
+  @include containerPadd;
+
+  @media (max-width: 320px) {
+    padding: 0;
+  }
 }
 
 .section-contact__header {
@@ -621,6 +908,14 @@ a {
   line-height: 31px;
   color: $bgColor;
   padding-bottom: 22px;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    line-height: 23px;
+    padding-left: 20px;
+    padding-right: 21px;
+    padding-bottom: 14px;
+  }
 }
 
 .section-contact__grid-hidden {
@@ -631,6 +926,10 @@ a {
 
   @media (max-width: 1024px) {
     top: 303px;
+  }
+
+  @media (max-width: 320px) {
+    top: 315px;
   }
 }
 
@@ -653,6 +952,10 @@ a {
     margin: -16px 267px 21px 30px;
     position: relative;
   }
+
+  @media (max-width: 320px) {
+    margin: -16px 34px 14px 19px;
+  }
 }
 
 .section-contact__name {
@@ -660,12 +963,22 @@ a {
   line-height: 22px;
   color: $textColor;
   margin-bottom: 5px;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 }
 
 .section-contact__home {
   @include fontRobotoReg;
   line-height: 28px;
   color: $grayColor;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .section-contact__phone {
@@ -675,6 +988,17 @@ a {
     position: absolute;
     left: 90px;
     top: 86px;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 0;
+  }
+
+  @media (max-width: 320px) {
+    position: absolute;
+    top: 95px;
+    left: -1px;
   }
 }
 
@@ -695,6 +1019,13 @@ a {
   @media (max-width: 1024px) {
     color: $btnColor;
   }
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 3px;
+    margin-left: 0;
+  }
 }
 
 .section-contact__form-header {
@@ -703,6 +1034,12 @@ a {
   color: $bgColor;
   margin-top: -5px;
   margin-bottom: 5px;
+
+  @media (max-width: 320px) {
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: -8px;
+  }
 }
 
 .section-contact__form-description {
@@ -710,6 +1047,17 @@ a {
   line-height: 22px;
   color: $formColor;
   margin-bottom: 12px;
+
+  @media (max-width: 768px) {
+    width: 466px;
+  }
+
+  @media (max-width: 320px) {
+    width: 267px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
 }
 
 .section-contact__block {
@@ -758,6 +1106,12 @@ a {
       outline: none;
     }
   }
+
+  @media (max-width: 320px) {
+    padding: 12px 23px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .section-contact__comment-text {
@@ -767,6 +1121,12 @@ a {
   padding-left: 23px;
   padding-top: 16px;
   color: $formColor;
+
+  @media (max-width: 320px) {
+    padding-top: 13px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .section-contact__btn-submit {
@@ -776,6 +1136,12 @@ a {
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
   @include btnHover;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 22px;
+  }
 }
 
 .footer__background {
@@ -784,6 +1150,11 @@ a {
 
 .footer__container {
   padding: 24px 0 16px;
+  @include containerPadd;
+
+  @media (max-width: 320px) {
+    padding: 0;
+  }
 }
 
 .footer__logo {
@@ -794,12 +1165,28 @@ a {
     height: 27px;
     margin-top: 7px;
   }
+
+  @media (max-width: 320px) {
+    width: 140px;
+    height: 18px;
+    padding-left: 30px;
+    margin-top: 15px;
+  }
 }
 
 .footer__tm {
   @include fontFirsRegularLtl;
   line-height: 18px;
   color: #E9E9E9;
+
+  @media (max-width: 768px) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 10px;
+    line-height: 13px;
+  }
 }
 
 .footer__description {
@@ -807,15 +1194,32 @@ a {
   line-height: 22px;
   color: $grayColor;
   max-width: 361px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .footer__description-copyright {
   color: #4A4A4A;
 }
 
+.footer__grid-item-logo {
+  @media (max-width: 320px) {
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4A4A4A;
+  }
+}
+
 .footer__grid-item-right {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 320px) {
+    order: 0;
+  }
 }
 
 .footer__description-social {
@@ -825,11 +1229,22 @@ a {
   margin-right: 0;
   margin-left: auto;
   margin-bottom: 8px;
+
+  @media (max-width: 320px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 27px;
+  }
 }
 
 .footer__block-social {
   margin-right: 14px;
   margin-left: auto;
+
+  @media (max-width: 320px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer__social-list {

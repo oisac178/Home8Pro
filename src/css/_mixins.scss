@@ -57,6 +57,11 @@
   left: auto;
   right: 15px;
   top: 15px;
+
+  @media (max-width: 320px) {
+    right: 5px;
+    top: 6px;
+   }
 }
 
 @mixin heshtagPrj {
@@ -64,6 +69,11 @@
   left: auto;
   right: 7px;
   top: 7px;
+
+  @media (max-width: 320px) {
+    right: 5px;
+    top: 5px;
+   }
 }
 
 @mixin prjDescr {
@@ -137,5 +147,27 @@
 
   @media (max-width: 975px) {
     max-width: 250px;
+  }
+
+  @media (max-width: 768px) {
+    width: 466px;
+    max-width: 466px;
+  }
+
+  @media (max-width: 320px) {
+    width: 278px;
+    max-width: 278px;
+  }
+}
+
+@mixin containerPadd {
+  @media (max-width: 768px) {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  @media (max-width: 320px) {
+    padding-left: 21px;
+    padding-right: 21px;
   }
 }
