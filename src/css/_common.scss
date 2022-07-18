@@ -293,6 +293,10 @@ a {
     background-size: contain;
   }
 
+  @media (max-width: 714px) {
+    padding-top: 150px;
+  }
+
   @media (max-width: 320px) {
     padding-top: 234px;
     padding-bottom: 10px;
@@ -352,6 +356,10 @@ a {
     line-height: 31px;
     padding-right: 73px;
     padding-bottom: 23px;
+  }
+
+  @media (max-width: 714px) {
+    padding-right: 50px;
   }
 
   @media (max-width: 320px) {
@@ -956,6 +964,10 @@ a {
     margin: -16px auto 21px 30px;
     padding-right: 167px;
     position: relative;
+  }
+
+  @media (max-width: 800px) {
+    padding-right: 140px;
   }
 
   @media (max-width: 768px) {
