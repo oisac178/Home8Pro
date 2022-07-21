@@ -261,6 +261,18 @@ a {
     background-color: transparent;
     transition: color .3s ease-in-out;
   }
+
+  @media (max-width: 550px) {
+    @include fontFirsRegularLtl;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 7px;
+  }
 }
 
 .section-hero__container {
@@ -297,6 +309,15 @@ a {
     padding-top: 150px;
   }
 
+  @media (max-width: 670px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 430px) {
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+
   @media (max-width: 320px) {
     padding-top: 234px;
     padding-bottom: 10px;
@@ -311,7 +332,7 @@ a {
   color: $textColor;
   background-color: $bgColor;
 
-  @media (max-width: 320px) {
+  @media (max-width: 370px) {
    padding: 4px 7px;
    font-size: 12px;
   }
@@ -329,6 +350,18 @@ a {
 
   @media (max-width: 768px) {
     padding-bottom: 14px;
+  }
+
+  @media (max-width: 670px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 10px;
   }
 
   @media (max-width: 320px) {
@@ -362,6 +395,33 @@ a {
     padding-right: 50px;
   }
 
+  @media (max-width: 670px) {
+    font-size: 28px;
+    padding-right: 70px;
+  }
+
+  @media (max-width: 590px) {
+    font-size: 24px;
+    line-height: 25px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 16px;
+    line-height: 18px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 14px;
+    padding-right: 5px;
+  }
+
   @media (max-width: 320px) {
     line-height: 26px;
     font-size: 24px;
@@ -376,6 +436,10 @@ a {
   background-color: $btnColor;
   transition: background-color .3s ease-in-out;
   @include btnHover;
+
+  @media (max-width: 550px) {
+    padding: 6px 12px;
+  }
 
   @media (max-width: 320px) {
     padding: 12px 22px;
@@ -398,6 +462,16 @@ a {
   @media (max-width: 768px) {
     font-size: 22px;
     line-height: 23px;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+    line-height: 16px;
   }
 
   @media (max-width: 320px) {
@@ -448,7 +522,7 @@ a {
     padding-bottom: 62px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 420px) {
     padding-bottom: 0;
     font-size: 14px;
     line-height: 25px;
@@ -475,7 +549,11 @@ a {
   color: $textColor;
   padding-bottom: 14px;
 
-  @media (max-width: 320px) {
+  @media (max-width: 420px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 370px) {
     font-size: 18px;
   }
 }
@@ -737,8 +815,15 @@ a {
     }
   }
 
+  @media (max-width: 470px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   @media (max-width: 320px) {
     margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -750,6 +835,12 @@ a {
 
   @media (max-width: 768px) {
     width: 292px;
+  }
+
+  @media (max-width: 470px) {
+    width: 200px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   @media (max-width: 320px) {
@@ -989,7 +1080,7 @@ a {
   color: $textColor;
   margin-bottom: 5px;
 
-  @media (max-width: 320px) {
+  @media (max-width: 370px) {
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -1000,7 +1091,7 @@ a {
   line-height: 28px;
   color: $grayColor;
 
-  @media (max-width: 320px) {
+  @media (max-width: 450px) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -1192,9 +1283,12 @@ a {
     margin-top: 7px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 450px) {
     width: 140px;
     height: 18px;
+  }
+
+  @media (max-width: 320px) {
     padding-left: 30px;
     margin-top: 15px;
   }
@@ -1256,6 +1350,11 @@ a {
   margin-left: auto;
   margin-bottom: 8px;
 
+  @media (max-width: 420px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   @media (max-width: 320px) {
     margin-left: auto;
     margin-right: auto;
@@ -1267,7 +1366,7 @@ a {
   margin-right: 14px;
   margin-left: auto;
 
-  @media (max-width: 320px) {
+  @media (max-width: 420px) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -1280,6 +1379,14 @@ a {
 
   .footer__social-item:not(:nth-child(3n)) {
     margin-right: 21px;
+
+    @media (max-width: 370px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 320px) {
+      margin-right: 21px;
+    }
   }
   .footer__social-icon {
     fill: $grayColor;
