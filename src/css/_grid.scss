@@ -44,7 +44,7 @@
   }
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(auto-fill, minmax(218px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-template-rows: 52px 332px auto;
   }
 
@@ -80,6 +80,7 @@
 
 .section-hero__grid-item3 {
   grid-column: 3/5;
+  height: 100%;
 
   @media (max-width: 1024px) {
     margin-top: -8px;
@@ -98,6 +99,8 @@
 
 .section-hero__grid-item4 {
   grid-column: 3/4;
+  height: 100%;
+  max-width: 100%;
 
   @media (max-width: 1024px) {
     margin-top: -8px;
@@ -116,9 +119,11 @@
 
 .section-hero__grid-item5 {
   grid-column: 4/5;
+  height: 100%;
 
   @media (max-width: 1024px) {
     margin-top: -8px;
+    max-width: 100%;
   }
 
   @media (max-width: 768px) {

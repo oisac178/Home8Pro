@@ -43,7 +43,6 @@ html, body, h1, h2, h3, p {
 }
 
 img {
-  max-width: 100%;
   object-fit: cover;
 }
 
@@ -79,11 +78,11 @@ a {
   margin: 0 auto;
 
   @media (max-width: 1366px) {
-    max-width: 1050px;
+    max-width: 962px;
   }
 
   @media (max-width: 1024px) {
-  max-width: 962px;
+    max-width: 714px;
   }
 
   @media (max-width: 768px) {
