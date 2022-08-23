@@ -81,7 +81,7 @@ a {
     max-width: 962px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     max-width: 714px;
   }
 
@@ -429,6 +429,10 @@ a {
   }
 }
 
+.section-hero__image {
+  max-width: 100%;
+}
+
 .section-hero__btn {
   text-align: center;
   padding: 15.5px 22px;
@@ -514,7 +518,7 @@ a {
   padding-bottom: 70px;
 
   @media (max-width: 1024px) {
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
 
   @media (max-width: 768px) {
@@ -531,6 +535,7 @@ a {
 .section-about__picture {
   padding-top: 63px;
   padding-bottom: 23px;
+  max-width: 100%;
 
   @media (max-width: 1024px) {
     padding-bottom: 20px;
@@ -658,7 +663,7 @@ a {
   margin-bottom: 68px;
 
   @media (max-width: 1024px) {
-    margin-bottom: 56px;
+    margin-bottom: 69px;
   }
 
   @media (max-width: 768px) {
@@ -693,7 +698,7 @@ a {
   background: url(../images/Lake.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Lake1024.png) center center no-repeat transparent;
+    background: url(../images/Lake1024.png) left center no-repeat transparent;
   }
 
   @media (max-width: 768px) {
@@ -723,7 +728,7 @@ a {
   background: url(../images/Tea.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Tea1024.png) center center no-repeat transparent;
+    background: url(../images/Tea1024.png) right center no-repeat transparent;
   }
 
   @media (max-width: 768px) {
@@ -740,7 +745,7 @@ a {
   background: url(../images/Orange.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Orange1024.png) center center no-repeat transparent;
+    background: url(../images/Orange1024.png) right center no-repeat transparent;
   }
 
   @media (max-width: 320px) {
@@ -753,7 +758,7 @@ a {
   background: url(../images/Girl.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Girl1024.png) center center no-repeat transparent;
+    background: url(../images/Girl1024.png) left center no-repeat transparent;
   }
 
   @media (max-width: 768px) {
@@ -794,6 +799,7 @@ a {
 
   @media (max-width: 1024px) {
     padding-right: 10px;
+    margin-bottom: 17px;
     &-hidden {
       display: none;
     }
@@ -901,7 +907,22 @@ a {
   padding: 22px 308px 30px 30px;
 
   @media (max-width: 1024px) {
-    padding: 30px 268px 30px 30px;
+    padding: 30px 270px 37px 30px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 196px 30px 30px 30px;
+  }
+}
+
+.section-project__pictures-block2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px 308px 30px 30px;
+
+  @media (max-width: 1024px) {
+    padding: 30px 264px 30px 37px;
   }
 
   @media (max-width: 320px) {
@@ -949,7 +970,7 @@ a {
   background: url(../images/Eye.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Eye1024.png) center center no-repeat transparent;
+    background: url(../images/Eye1024.png) left center no-repeat transparent;
     height: 307px;
   }
 
@@ -969,7 +990,7 @@ a {
   background: url(../images/Ice.png) center center no-repeat transparent;
 
   @media (max-width: 1024px) {
-    background: url(../images/Ice1024.png) center center no-repeat transparent;
+    background: url(../images/Ice1024.png) right center no-repeat transparent;
     height: 307px;
   }
 
@@ -1178,10 +1199,12 @@ a {
 
 .section-contact__block {
   display: flex;
+  width: 100%;
 }
 
 .section-contact__label {
   position: relative;
+  width: 100%;
 }
 
 .section-contact__error {
