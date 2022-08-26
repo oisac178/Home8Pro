@@ -53,9 +53,23 @@
     grid-template-rows: 35px 228px auto;
   }
 
+  @media (max-width: 650px) {
+    grid-template-rows: 35px 170px auto;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-rows: 35px 150px auto;
+    gap: 10px;
+  }
+
+  @media (max-width: 430px) {
+    grid-template-rows: 35px 120px auto;
+  }
+
   @media (max-width: 320px) {
     grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
     grid-template-rows: 422px 35px 186px 105px;
+    gap: 30px;
   }
 }
 
@@ -147,6 +161,10 @@
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(118px, 1fr));
+  }
+
+  @media (max-width: 500px) {
+    gap: 20px;
   }
 
   @media (max-width: 320px) {
