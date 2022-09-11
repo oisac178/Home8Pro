@@ -77,14 +77,6 @@ a {
   max-width: $containerMaxwidth;
   margin: 0 auto;
 
-  @media (max-width: 1366px) {
-    max-width: 962px;
-  }
-
-  @media (max-width: 1023px) {
-    max-width: 714px;
-  }
-
   @media (max-width: 768px) {
     max-width: 100%;
   }
@@ -94,9 +86,11 @@ a {
   display: flex;
   padding: 24px 0 26px;
   margin-bottom: 41px;
+  @include containerPadd;
 
   @media (max-width: 1024px) {
-    padding: 27px 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
     margin-bottom: 34px;
   }
 
@@ -175,8 +169,14 @@ a {
 }
 
 .header__block {
+  @media (max-width: 1024px) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
   @media (max-width: 320px) {
     background: #4A4A4A;
+    margin: 0;
   }
 }
 
@@ -389,8 +389,13 @@ a {
     line-height: 34px;
   }
 
+  @media (max-width: 840px) {
+    font-size: 28px;
+  }
+
   @media (max-width: 768px) {
     line-height: 31px;
+    font-size: 34px;
     padding-right: 73px;
     padding-bottom: 23px;
   }
@@ -528,15 +533,6 @@ a {
   @include fontRobotoReg;
   line-height: 28px;
   color: $grayColor;
-  padding-bottom: 70px;
-
-  @media (max-width: 1024px) {
-    padding-bottom: 90px;
-  }
-
-  @media (max-width: 768px) {
-    padding-bottom: 62px;
-  }
 
   @media (max-width: 420px) {
     padding-bottom: 0;
